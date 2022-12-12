@@ -1,0 +1,390 @@
+/* import Google Fonts */
+
+/* font-family: 'Inter', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@600;700&family=Poppins:wght@400;500;600&family=Raleway:wght@600&display=swap");
+
+body {
+  /* font-family: "Nunito Sans", sans-serif; */
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  /* green */
+  --clr-primary-green80: #155c3f;
+  --clr-primary-green70: #27ad77;
+  --clr-primary-green50: #61dbaa;
+  --clr-primary-green30: #8ae5c0;
+  --clr-primary-green10: #def8ed;
+
+  /* orange */
+  --clr-secondary-orange80: #853f00;
+  --clr-secondary-orange70: #eb7000;
+  --clr-secondary-orange50: #ff8a20;
+  --clr-secondary-orange30: #ffbf85;
+  --clr-secondary-orange10: #ffdab8;
+
+  /* gray */
+  --clr-title: #123763;
+  --clr-text-body: #6d6d6d;
+  --clr-text-in-field: #cccccc;
+  --clr-text-disable: #e6e6e6;
+  --clr-text-white: #ffffff;
+
+  --clr-border: #e6e6e6;
+}
+
+/* Heading Bold */
+
+.h1-bold {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 96px;
+}
+.h2-bold {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 88px;
+}
+.h3-bold {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+}
+.h4-bold {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+}
+.h5-bold {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 38px;
+}
+.h6-bold {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Heading Semibold */
+
+.h1-sb {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 96px;
+}
+.h2-sb {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 88px;
+}
+.h3-sb {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 64px;
+}
+.h4-sb {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+}
+.h5-sb {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 38px;
+}
+.h6-sb {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Paragraph SemiBold */
+
+.body-semibold {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+}
+.caption-semibold {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+}
+.label-semibold {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+}
+/* Paragraph Medium */
+
+.body-medium {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+}
+.caption-medium {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}
+.label-medium {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+/* Paragraph Regular */
+
+.body-regular {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+.caption-regular {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+.label-regular {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+/* Button */
+
+.btn.btn-primary {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: var(--clr-secondary-orange50);
+  border-color: var(--clr-secondary-orange50);
+}
+
+.btn.btn-primary.outline {
+  /* font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px; */
+  background-color: transparent;
+  border-color: var(--clr-secondary-orange50);
+  color: var(--clr-secondary-orange50);
+}
+
+.btn.btn-primary.xlarge {
+  padding: 25px 40px;
+}
+.btn.btn-primary.large {
+  padding: 16px 40px;
+}
+.btn.btn-primary.medium {
+  padding: 12px 32px;
+}
+.btn.btn-primary.small {
+  padding: 8px 32px;
+}
+.btn.btn-primary.xsmall {
+  padding: 4px 24px;
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--clr-secondary-orange70);
+  border-color: var(--clr-secondary-orange70);
+}
+
+.btn.btn-primary:active {
+  background-color: var(--clr-secondary-orange70);
+  border-color: var(--clr-secondary-orange70);
+}
+
+.btn.btn-primary.outline:hover {
+  background-color: var(--clr-secondary-orange70);
+  border-color: var(--clr-secondary-orange70);
+  color: var(--clr-text-white);
+}
+
+/* Utitilies */
+
+section {
+  margin-bottom: 100px;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.accordion-button {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 38px;
+  text-transform: capitalize;
+}
+
+/* Hero */
+
+.hero {
+  background-image: url("/assets/hero-1.jpeg");
+  padding: 128px 0;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 70vh;
+  z-index: 99;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Search Form */
+
+.search-wrapper {
+  background-color: var(--clr-text-white);
+  padding: 24px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 700px;
+  z-index: 999 !important;
+  display: flex;
+  /* align-items: center; */
+  gap: 1rem;
+  border-radius: 8px;
+}
+
+.search-wrapper label {
+  color: var(--clr-title);
+}
+.search-wrapper div {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.search-wrapper button {
+  margin-top: auto;
+}
+
+/* Section New Listing */
+
+.listing-card {
+  max-width: 296px;
+  padding: 16px 16px 20px 16px;
+  border-radius: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.listing-card:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+}
+
+.listing-card .listing-card-image {
+  width: 100%;
+  height: 264px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--clr-border);
+  overflow: hidden;
+}
+
+.listing-card-image img{
+  height: 100%;
+}
+
+.location p {
+  font-size: 12px;
+}
+.location .fa-solid {
+  color: var(--clr-primary-green70);
+  font-size: 16px;
+}
+
+.card-content {
+  margin-top: 16px;
+}
+
+.price .fa-solid {
+  color: var(--clr-secondary-orange50);
+  margin-right: 0.5rem;
+  font-size: 18px;
+}
+
+.img1 {
+  /*background-image: url("/assets/h1.jpeg");*/
+}
+.img2 {
+  background-image: url("/assets/h2.jpeg");
+}
+.img3 {
+  background-image: url("/assets/h3.jpeg");
+}
+.img4 {
+  background-image: url("/assets/h4.jpeg");
+}
+
+/* Section New Listing Ends */
+
+/* Section Features */
