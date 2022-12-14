@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="icons/css/all.css" />
-    <!-- <link rel="stylesheet" href="hero.css" /> -->
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
       integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
@@ -133,7 +133,7 @@
           class="row listing-wrapper d-flex justify-content-between flex-wrap"
         >
           <!-- card 1 -->
-          <div class="listing-card">
+          <div class="listing-card-new">
             <div class="listing-card-image img1"></div>
             <div class="card-content">
               <h5 class="h5-bold">Grand Family House</h5>
@@ -157,7 +157,7 @@
           </div>
 
           <!-- card 2 -->
-          <div class="listing-card">
+          <div class="listing-card-new">
             <div class="listing-card-image img2"></div>
             <div class="card-content">
               <h5 class="h5-bold">The Elements</h5>
@@ -180,7 +180,7 @@
             </div>
           </div>
           <!-- card 3 -->
-          <div class="listing-card">
+          <div class="listing-card-new">
             <div class="listing-card-image img3"></div>
             <div class="card-content">
               <h5 class="h5-bold">Triraksa Village 2</h5>
@@ -204,7 +204,7 @@
           </div>
 
           <!-- card 4 -->
-          <div class="listing-card">
+          <div class="listing-card-new">
             <div class="listing-card-image img4"></div>
             <div class="card-content">
               <h5 class="h5-bold">Nuvasa Bay</h5>
@@ -230,6 +230,79 @@
       </div>
     </section>
     <!-- Section New Listing Ends -->
+
+    <!-- Section Listing Categories -->
+
+    <section>
+      <div class="container">
+        <div class="section-header mb-5 text-center">
+          <h3 class="h3-bold">Listing Categories</h3>
+          <p class="body-regular w-50 ms-auto me-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et.
+          </p>
+        </div>
+        <div class="filter-wrapper">
+          <div class="row">
+            <div
+              class="col d-flex gap-2 justify-content-center mb-5"
+              id="filter-buttons"
+            >
+              <button class="btn btn-primary xsmall filter-btn">All</button>
+              <button class="btn btn-primary outline xsmall filter-btn">
+                Single Family
+              </button>
+              <button class="btn btn-primary outline xsmall filter-btn">
+                Villa
+              </button>
+              <button class="btn btn-primary outline xsmall filter-btn">
+                Apartment
+              </button>
+              <button class="btn btn-primary outline xsmall filter-btn">
+                Los Angeles
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Listing -->
+        <div class="row">
+          <div
+            class="row listing-wrapper d-flex gap-4 flex-wrap"
+            id="listingWrapper"
+          >
+            <!-- card 1 -->
+            <!-- <div class="listing-card" data-filter="villa">
+                  <div class="listing-card-image img1">
+                  <img src="./assets/h1.jpeg" alt="" />
+                 </div>
+              <div class="card-content">
+                <h5 class="h5-bold">Grand Family House</h5>
+                <div
+                  class="location d-flex justify-content-between align-item-center"
+                >
+                  <p class="body-medium">
+                    <span><i class="fa-solid fa-location-dot"></i></span> Ohio
+                    St. South Gate, California
+                  </p>
+                </div>
+
+                <div
+                  class="price d-flex justify-content-between align-item-center"
+                >
+                  <h5 class="h5-bold"><span>$</span>350</h5>
+                  <p class="body-semibold">
+                    <span><i class="fa-solid fa-star"></i></span
+                    ><span>4.8</span>
+                  </p>
+                </div>
+              </div>
+            </div> -->
+          </div>
+
+          <div id="myarray"></div>
+        </div>
+      </div>
+    </section>
 
     <!-- Section Features -->
     <section>
@@ -365,160 +438,13 @@
     </section>
     <!-- Section Features Ends -->
 
-    <!-- Section Listing Categories -->
-
-    <section>
-      <div class="container">
-        <div class="section-header mb-5 text-center">
-          <h3 class="h3-bold">Listing Categories</h3>
-          <p class="body-regular w-50 ms-auto me-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et.
-          </p>
-        </div>
-        <div class="filter-wrapper">
-          <div class="row">
-            <div
-              class="col d-flex gap-2 justify-content-center mb-5"
-              id="filter-buttons"
-            >
-              <button class="btn btn-primary xsmall filter-btn">All</button>
-              <button class="btn btn-primary outline xsmall filter-btn">
-                Houses
-              </button>
-              <button class="btn btn-primary outline xsmall filter-btn">
-                Villa
-              </button>
-              <button class="btn btn-primary outline xsmall filter-btn">
-                Apartment
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Listing -->
-        <div class="row">
-          <div
-            class="row listing-wrapper d-flex justify-content-between flex-wrap"
-            id="listingWrapper"
-          >
-            <!-- card 1 -->
-<!--                        <div class="listing-card">-->
-<!--                          <div class="listing-card-image img1">-->
-<!--                            <img src="./assets/h1.jpeg" alt="" />-->
-<!--                          </div>-->
-<!--                          <div class="card-content">-->
-<!--                            <h5 class="h5-bold">Grand Family House</h5>-->
-<!--                            <div-->
-<!--                              class="location d-flex justify-content-between align-item-center"-->
-<!--                            >-->
-<!--                              <p class="body-medium">-->
-<!--                                <span><i class="fa-solid fa-location-dot"></i></span> Ohio-->
-<!--                                St. South Gate, California-->
-<!--                              </p>-->
-<!--                            </div>-->
-
-<!--                            <div-->
-<!--                              class="price d-flex justify-content-between align-item-center"-->
-<!--                            >-->
-<!--                              <h5 class="h5-bold"><span>$</span>350</h5>-->
-<!--                              <p class="body-semibold">-->
-<!--                                <span><i class="fa-solid fa-star"></i></span-->
-<!--                                ><span>4.8</span>-->
-<!--                              </p>-->
-<!--                            </div>-->
-<!--                          </div>-->
-<!--                        </div>-->
-
-            <!-- card 2 -->
-            <!--            <div class="listing-card">-->
-            <!--              <div class="listing-card-image">-->
-            <!--                <img src="./assets/h2.jpeg" alt="" />-->
-            <!--              </div>-->
-            <!--              <div class="card-content">-->
-            <!--                <h5 class="h5-bold">The Elements</h5>-->
-            <!--                <div-->
-            <!--                  class="location d-flex justify-content-between align-item-center"-->
-            <!--                >-->
-            <!--                  <p class="body-medium">-->
-            <!--                    <span><i class="fa-solid fa-location-dot"></i></span>-->
-            <!--                    Jakarta Selatan, DKI Jakarta-->
-            <!--                  </p>-->
-            <!--                </div>-->
-            <!--                <div-->
-            <!--                  class="price d-flex justify-content-between align-item-center"-->
-            <!--                >-->
-            <!--                  <h5 class="h5-bold"><span>$</span>620</h5>-->
-            <!--                  <p class="body-semibold">-->
-            <!--                    <span><i class="fa-solid fa-star"></i></span-->
-            <!--                    ><span>4.8</span>-->
-            <!--                  </p>-->
-            <!--                </div>-->
-            <!--              </div>-->
-            <!--            </div>-->
-            <!-- card 3 -->
-            <!--            <div class="listing-card">-->
-            <!--              <div class="listing-card-image img1">-->
-            <!--                <img src="./assets/h3.jpeg" alt="" />-->
-            <!--              </div>-->
-            <!--              <div class="card-content">-->
-            <!--                <h5 class="h5-bold">Triraksa Village 2</h5>-->
-            <!--                <div-->
-            <!--                  class="location d-flex justify-content-between align-item-center"-->
-            <!--                >-->
-            <!--                  <p class="body-medium">-->
-            <!--                    <span><i class="fa-solid fa-location-dot"></i></span>-->
-            <!--                    Tangerang, Banten-->
-            <!--                  </p>-->
-            <!--                </div>-->
-            <!--                <div-->
-            <!--                  class="price d-flex justify-content-between align-item-center"-->
-            <!--                >-->
-            <!--                  <h5 class="h5-bold"><span>$</span>682</h5>-->
-            <!--                  <p class="body-semibold">-->
-            <!--                    <span><i class="fa-solid fa-star"></i></span-->
-            <!--                    ><span>4.8</span>-->
-            <!--                  </p>-->
-            <!--                </div>-->
-            <!--              </div>-->
-            <!--            </div>-->
-
-            <!-- card 4 -->
-            <!--            <div class="listing-card">-->
-            <!--              <div class="listing-card-image">-->
-            <!--                <img src="./assets/h4.jpeg" alt="">-->
-            <!--              </div>-->
-            <!--              <div class="card-content">-->
-            <!--                <h5 class="h5-bold">Nuvasa Bay</h5>-->
-            <!--                <div-->
-            <!--                  class="location d-flex justify-content-between align-item-center"-->
-            <!--                >-->
-            <!--                  <p class="body-medium">-->
-            <!--                    <span><i class="fa-solid fa-location-dot"></i></span> Batam,-->
-            <!--                    Kepulauan Riau-->
-            <!--                  </p>-->
-            <!--                </div>-->
-            <!--                <div-->
-            <!--                  class="price d-flex justify-content-between align-item-center"-->
-            <!--                >-->
-            <!--                  <h5 class="h5-bold"><span>$</span>969</h5>-->
-            <!--                  <p class="body-semibold">-->
-            <!--                    <span><i class="fa-solid fa-star"></i></span-->
-            <!--                    ><span>4.8</span>-->
-            <!--                  </p>-->
-            <!--                </div>-->
-            <!--              </div>-->
-            <!--            </div>-->
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Footer -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script src="main.js"></script>
+
+    <script src="main.js" type="module"></script>
   </body>
 </html>
