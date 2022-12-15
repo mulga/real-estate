@@ -19,7 +19,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg pt-3 pb-3">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="./index.html">
           <img src="/assets/logo.png" alt="" />
         </a>
 
@@ -39,20 +39,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Agency</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link">Blog</a>
+              <a class="nav-link" href="#">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link">About</a>
+              <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link">Contact</a>
+              <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
 
@@ -72,8 +74,10 @@
         <div class="container-fluid">
           <div class="container">
             <div class="col-12 text-white">
-              <h1 class="h1-bold text-center">Discover your perfect home</h1>
-              <p class="body-regular text-center">
+              <h1 class="h1-bold text-center ms-auto me-auto">
+                Discover your perfect home
+              </h1>
+              <p class="body-regular text-center w-75">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quisquam quae, voluptatum, quod, voluptas quibusdam voluptates
                 quidem voluptatibus quos quia quas.
@@ -81,34 +85,31 @@
               <!-- <button class="btn btn-primary large ms-auto me-auto">
               Search
             </button> -->
-              <div class="search-wrapper justify-content-center">
+
+              <div
+                class="search-wrapper justify-content-center d-flex flex-wrap flex-md-nowrap"
+              >
                 <div class="">
                   <label for="location">Location</label>
                   <select class="form-select" id="location">
                     <!-- <option selected>Open this select menu</option> -->
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Playa Vista">Playa Vista</option>
+                    <option value="Granada Hills">Granada Hills</option>
+                    <option value="Van Nuys">Van Nuys</option>
                   </select>
                 </div>
                 <div class="">
                   <label for="type">Type</label>
                   <select class="form-select" id="location">
                     <!-- <option selected>Open this select menu</option> -->
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="Single Family">Single Family</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="Condo">Condo</option>
                   </select>
                 </div>
-                <div class="">
-                  <label for="range">Range</label>
-                  <select class="form-select" id="range">
-                    <!-- <option selected>Open this select menu</option> -->
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
+
                 <div>
                   <button class="btn btn-primary small">Search</button>
                 </div>
@@ -124,17 +125,21 @@
     <section>
       <div class="container">
         <div
-          class="section-header d-flex justify-content-between mb-5 gap-5 align-items-center"
+          class="section-header d-flex justify-content-between mb-5 gap-2 align-items-center flex-wrap"
         >
-          <h3 class="h3-bold">Newest Listings</h3>
-          <button class="btn btn-primary medium">View All</button>
+          <h3 class="fs-1">Newest Listings</h3>
+          <button class="btn btn-primary medium">
+            <a href="./all-list.html">View All</a>
+          </button>
         </div>
         <div
           class="row listing-wrapper d-flex justify-content-between flex-wrap"
         >
           <!-- card 1 -->
           <div class="listing-card-new">
-            <div class="listing-card-image img1"></div>
+            <div class="listing-card-image img1">
+              <img src="" alt="" />
+            </div>
             <div class="card-content">
               <h5 class="h5-bold">Grand Family House</h5>
               <div
@@ -245,10 +250,12 @@
         <div class="filter-wrapper">
           <div class="row">
             <div
-              class="col d-flex gap-2 justify-content-center mb-5"
+              class="col-md d-flex gap-2 justify-content-center mb-5"
               id="filter-buttons"
             >
-              <button class="btn btn-primary xsmall filter-btn">All</button>
+              <button class="btn btn-primary outline xsmall filter-btn active">
+                All
+              </button>
               <button class="btn btn-primary outline xsmall filter-btn">
                 Single Family
               </button>
@@ -259,7 +266,7 @@
                 Apartment
               </button>
               <button class="btn btn-primary outline xsmall filter-btn">
-                Los Angeles
+                Condo
               </button>
             </div>
           </div>
@@ -270,36 +277,10 @@
             class="row listing-wrapper d-flex gap-4 flex-wrap"
             id="listingWrapper"
           >
-            <!-- card 1 -->
-            <!-- <div class="listing-card" data-filter="villa">
-                  <div class="listing-card-image img1">
-                  <img src="./assets/h1.jpeg" alt="" />
-                 </div>
-              <div class="card-content">
-                <h5 class="h5-bold">Grand Family House</h5>
-                <div
-                  class="location d-flex justify-content-between align-item-center"
-                >
-                  <p class="body-medium">
-                    <span><i class="fa-solid fa-location-dot"></i></span> Ohio
-                    St. South Gate, California
-                  </p>
-                </div>
-
-                <div
-                  class="price d-flex justify-content-between align-item-center"
-                >
-                  <h5 class="h5-bold"><span>$</span>350</h5>
-                  <p class="body-semibold">
-                    <span><i class="fa-solid fa-star"></i></span
-                    ><span>4.8</span>
-                  </p>
-                </div>
-              </div>
-            </div> -->
+            <!-- card comes here -->
+            <!-- card comes here -->
+            <!-- card comes here -->
           </div>
-
-          <div id="myarray"></div>
         </div>
       </div>
     </section>

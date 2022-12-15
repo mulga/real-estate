@@ -5,10 +5,11 @@ for (let item of homeList) {
   let listingCard = document.createElement("div");
   listingCard.classList.add("listing-card");
   // listingCard.filterV = item.homeType.replace(/_/g, " ").toLowerCase();
-  listingCard
-    .setAttribute("data-filter", item.homeType)
-    .replace(/_/g, " ")
-    .toLowerCase();
+  listingCard.setAttribute(
+    "data-category",
+    item.homeType.toLowerCase().replace(/_/g, " ")
+  );
+
   let listingCardImage = document.createElement("div");
   listingCardImage.classList.add("listing-card-image");
   let image = document.createElement("img");
@@ -16,6 +17,12 @@ for (let item of homeList) {
   listingCard.appendChild(listingCardImage);
   listingCardImage.appendChild(image);
   document.getElementById("listingWrapper").appendChild(listingCard);
+  // home type
+  let homeType = document.createElement("span");
+  homeType.classList.add("home-type");
+  homeType.innerText = item.homeType.replace(/_/g, " ");
+  listingCardImage.appendChild(homeType);
+
   // card content
   let cardContent = document.createElement("div");
   cardContent.classList.add("card-content");
@@ -57,23 +64,25 @@ for (let item of homeList) {
   price.appendChild(homeStatus);
 }
 
-// filter
-let filterBtn = document.querySelectorAll(".filter-btn");
-for (let i = 1; i < filterBtn.length; i++) {
-  filterBtn[i].addEventListener("click", function () {
-    let filterValue = filterBtn[i].innerText.toLowerCase();
-    let listingCard = document.querySelectorAll(".listing-card");
-    console.log("listing card: " + listingCard);
-    console.log("filter value: " + filterValue);
+const filterBtnParent = document.querySelector("#filter-buttons");
 
-    // for (let item of listingCard) {
-    //   if (item.children[1].children[0].innerText == filterValue) {
-    //     item.classList = "block";
-    //   } else if (filterValue == "All") {
-    //     item.style.display = "block";
-    //   } else {
-    //     item.style.display = "none";
-    //   }
-    // }
-  });
-}
+let listingCard = document.querySelectorAll(".listing-card");
+
+filterBtnParent.addEventListener("click", (e) => {
+  console.log(e);
+
+  if (e.target.classList.contains("filter-btn")) {
+    filterBtnParent.querySelector(".active").classList.remove("active");
+    e.target.classList.add("active");
+    let filterValue = e.target.innerText.toLowerCase();
+    listingCard.forEach((card) => {
+      if (card.dataset.category === filterValue || filterValue === "all") {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+});
+
+// modal

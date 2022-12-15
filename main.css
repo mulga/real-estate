@@ -251,6 +251,11 @@ button {
   border-color: var(--clr-secondary-orange70);
 }
 
+.btn.btn-primary.active {
+  background-color: var(--clr-secondary-orange70);
+  color: var(--clr-text-white);
+}
+
 .btn.btn-primary.outline:hover {
   background-color: var(--clr-secondary-orange70);
   border-color: var(--clr-secondary-orange70);
@@ -267,6 +272,15 @@ img {
   width: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button a:hover {
+  color: inherit;
 }
 
 .accordion-button {
@@ -332,7 +346,8 @@ img {
 
 /* Section New Listing */
 
-.listing-card {
+.listing-card,
+.listing-card-new {
   max-width: 296px;
   padding: 16px 16px 20px 16px;
   border-radius: 16px;
@@ -356,10 +371,12 @@ img {
   background-position: center;
   background-color: var(--clr-border);
   overflow: hidden;
+  position: relative;
 }
 
 .listing-card-image img {
   height: 100%;
+  /* position: relative; */
 }
 
 .location {
@@ -394,6 +411,19 @@ img {
   text-transform: uppercase;
 
   background-color: var(--clr-secondary-orange50);
+}
+
+.home-type {
+  position: absolute;
+  z-index: 999;
+  top: 10px;
+  left: 10px;
+  font-size: 9px;
+  color: #ffffff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+
+  background-color: var(--clr-primary-green80);
 }
 
 .img1 {
