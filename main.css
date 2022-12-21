@@ -239,6 +239,13 @@ button {
 .btn.btn-primary.xsmall {
   padding: 4px 24px;
 }
+.btn.btn-primary.detail {
+  background-color: var(--clr-primary-green30);
+  border: var(--clr-primary-green30);
+  padding: 4px 24px;
+  width: 100%;
+  margin-top: 1.5rem;
+}
 
 .btn.btn-primary:hover {
   background-color: var(--clr-secondary-orange70);
@@ -295,14 +302,6 @@ button a:hover {
 /* --------------- */
 /* Custom CSS      */
 /* --------------- */
-
-/* Add listing modal */
-.add-listing-modal {
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: var(--clr-primary-green30);
-}
 
 /* hero slider */
 
@@ -405,6 +404,7 @@ button a:hover {
   padding: 16px 16px 20px 16px;
   border-radius: 16px;
   transition: all 0.3s ease-in-out;
+  margin-bottom: 3rem;
 }
 
 .listing-card-new {
@@ -495,6 +495,30 @@ button a:hover {
   border-radius: 5px;
 
   background-color: var(--clr-primary-green80);
+}
+
+.favorite {
+  position: absolute;
+  z-index: 999;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 0.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+
+  /* background-color: var(--clr-primary-green80); */
+}
+
+.favorite:hover {
+  opacity: 1;
+}
+
+.favorite.active {
+  color: red;
+  opacity: 1;
 }
 
 /* footer */

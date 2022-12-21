@@ -23,6 +23,16 @@ for (let item of homeList.slice(0, 8)) {
   homeType.innerText = item.homeType.replace(/_/g, " ");
   listingCardImage.appendChild(homeType);
 
+  // favorite
+  let favorite = document.createElement("span");
+  favorite.classList.add("favorite");
+  listingCardImage.appendChild(favorite);
+  // favorite icon
+  let favoriteIcon = document.createElement("i");
+  favoriteIcon.classList.add("fa-solid");
+  favoriteIcon.classList.add("fa-heart");
+  favorite.appendChild(favoriteIcon);
+
   // card content
   let cardContent = document.createElement("div");
   cardContent.classList.add("card-content");
@@ -62,6 +72,11 @@ for (let item of homeList.slice(0, 8)) {
   homeStatus.classList.add("home-status");
   homeStatus.innerText = item.homeStatus.replace(/_/g, " ");
   price.appendChild(homeStatus);
+
+  let detail = document.createElement("button");
+  detail.classList.add("btn", "btn-primary", "detail", "xsmall");
+  detail.innerText = "View Details";
+  cardContent.appendChild(detail);
 }
 
 const filterBtnParent = document.querySelector("#filter-buttons");
@@ -125,70 +140,12 @@ document.querySelectorAll(".slider").forEach((slider) => {
 // ------------//
 // ------------//
 
-// let sliderStatus = document.getElementById("sliderStatus");
-// let sliderTitle = document.getElementById("sliderTitle");
-// let sliderAdress = document.getElementById("sliderAdress");
-// let sliderImage = document.getElementById("sliderImage");
+// favorite
 
-// for (i = 0; i <= homeList.slice(0, 3); i++) {
-//   homeList[i];
-// }
+let favorite = document.querySelectorAll(".favorite");
 
-// for (let ev of homeList.slice(0, 4)) {
-//   // console.log(ev.address.city);
-//   function getText() {
-//     sliderTitle.innerHTML = ev.address.city;
-//     sliderStatus.innerHTML = ev.homeStatus;
-//     sliderAdress.innerHTML = ev.address.streetAddress;
-//     sliderImage.setAttribute("src", ev.photos[0]);
-//     console.log(ev.address.city);
-//   }
-// }
-
-// getText();
-
-// function getRight() {
-//   if (i >= homeList.length - 1) {
-//     i = -1;
-//   }
-//   i++;
-//   getText();
-// }
-
-// function getLeft() {
-//   if (i <= 0) {
-//     i = homeList.length;
-//   }
-//   i--;
-//   getText();
-// }
-
-// slider II
-
-const person = [
-  {
-    imgFile: "01.jpg",
-    isim: "Susan Smith",
-    job: "web developer",
-    text: "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry",
-  },
-
-  {
-    imgFile: "02.jpg",
-    isim: "Benjamin Matthews",
-    job: "designer",
-    text: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris",
-  },
-  {
-    imgFile: "03.jpg",
-    isim: "Martha Griffin",
-    job: "software engineer",
-    text: "Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. malesuada magna mollis elit. malesuada magna mollis elit. malesuada",
-  },
-  {
-    imgFile: "04.jpg",
-    isim: "Alice Mendoza",
-    job: "finance",
-    text: "Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis ",
-  },
-];
+favorite.forEach((fav) => {
+  fav.addEventListener("click", (e) => {
+    fav.classList.toggle("active");
+  });
+});
