@@ -147,5 +147,6 @@ let favorite = document.querySelectorAll(".favorite");
 favorite.forEach((fav) => {
   fav.addEventListener("click", (e) => {
     fav.classList.toggle("active");
+    console.log(e.target.parentElement.parentElement.parentElement);
   });
 });
